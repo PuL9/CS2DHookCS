@@ -1,5 +1,5 @@
 # CS2D hack made with C# by PuL9
-Currently **will not work** because signatures are for a different CS2D version
+Currently **will not work** because signatures are for a different CS2D version <br />
 **DO NOT CHEAT ON PUBLIC CS2D SERVERS**
 
 ## Includes
