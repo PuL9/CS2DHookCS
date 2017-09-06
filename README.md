@@ -1,5 +1,6 @@
 # CS2D hack made with C# by PuL9
 Currently **will not work** because signatures are for a different CS2D version <br />
+Probably the first ever **internal** game cheat in the world made with C# <br />
 **DO NOT CHEAT ON PUBLIC CS2D SERVERS**
 
 ## Includes
