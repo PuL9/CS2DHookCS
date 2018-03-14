@@ -17,6 +17,7 @@ namespace CS2DHookCS.Engine
         public delegate void DrawRectDlg(float x, float y, float width, float height);
         public delegate void DrawStringDlg(IntPtr textAdr, float x, float y);
         public delegate void SetRotationDlg(float rotation);
+        public delegate void SetScaleDlg(float x, float y);
 
         public static SetColorDlg SetColor;
         public static SetAlphaDlg SetAlpha;
@@ -25,6 +26,7 @@ namespace CS2DHookCS.Engine
         public static DrawRectDlg DrawRect;
         public static DrawStringDlg DrawString;
         public static SetRotationDlg SetRotation;
+        public static SetScaleDlg SetScale;
 
         /// <summary>
         /// Find BlitzMAX functions
@@ -38,6 +40,7 @@ namespace CS2DHookCS.Engine
             DrawRect = Memory.GetFunction<DrawRectDlg>(Memory.FixedAobscan(Signatures.DrawRect));
             DrawString = Memory.GetFunction<DrawStringDlg>(Memory.FixedAobscan(Signatures.DrawString));
             SetRotation = Memory.GetFunction<SetRotationDlg>(Memory.FixedAobscan(Signatures.SetRotation));
+            SetScale = Memory.GetFunction<SetScaleDlg>(Memory.FixedAobscan(Signatures.SetScale));
         }
 
         public static void DrawBorder(int x, int y, int w, int h)

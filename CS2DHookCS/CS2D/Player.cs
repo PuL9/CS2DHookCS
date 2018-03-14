@@ -15,8 +15,8 @@ namespace CS2DHookCS.CS2D
 
         public int ID { get { return *(int*)(Base + Playerstruct.ID); } }
 
-        public int Health { get { return *(int*)(Base + Playerstruct.Health); } }
-        public int Armor { get { return *(int*)(Base + Playerstruct.Armor); } }
+        public int Health { get { return *(int*)(*(int*)(Base + Playerstruct.Health) + 0x8) + 5; } }
+        public int Armor { get { return *(int*)(*(int*)(Base + Playerstruct.Armor) + 0x8) + 5; } }
         public int Money { get { return *(int*)(Base + Playerstruct.Money); } }
 
         public float Rotation
@@ -30,20 +30,17 @@ namespace CS2DHookCS.CS2D
 
         public int Speed
         {
-            get { return *(int*)(Base + Playerstruct.Speed); }
-            set { *(int*)(Base + Playerstruct.Speed) = value; }
-        }
-
-        public float Recoil
-        {
-            get { return *(float*)(Base + Playerstruct.Recoil); }
-            set { *(float*)(Base + Playerstruct.Recoil) = value; }
+            get { return *(int*)(*(int*)(Base + Playerstruct.Speed) + 0x8) + 5; }
+            set { *(int*)(*(int*)(Base + Playerstruct.Speed) + 0x8) = value - 5; }
         }
 
         public Team Team { get { return (Team)(*(int*)(Base + Playerstruct.Team)); } }
+        public int Ping { get { return (*(int*)(Base + Playerstruct.Ping)); } }
 
         public HitscanResult Hitscan { get; set; }
         public float Distance { get; set; }
+
+        public bool IsPlaying { get { return Team != Team.S && Health > 0; } }
 
         public Player(IntPtr playerBase)
         {

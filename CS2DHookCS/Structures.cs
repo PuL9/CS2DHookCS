@@ -13,18 +13,18 @@ namespace CS2DHookCS
 
         public static int ID = 0x8;
 
-        public static int Health = 0x164;
-        public static int Armor = 0x16C;
+        public static int Health = 0x1BC;
+        public static int Armor = 0x1C4;
         public static int Money = 0x170;
 
-        public static int Rotation = 0x14C;
+        public static int Rotation = 0x1A4;
 
-        public static int PosX = 0x144;
-        public static int PosY = 0x148;
+        public static int PosX = 0x19C;
+        public static int PosY = 0x1A0;
 
-        public static int Speed = 0x218;
-        public static int Recoil = 0x1F8;
+        public static int Speed = 0x290;
         
-        public static int Team = 0x134;
+        public static int Team = 0x18C;
+        public static int Ping = 0x70;
     }
 }

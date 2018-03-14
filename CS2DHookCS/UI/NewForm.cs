@@ -19,20 +19,20 @@ namespace CS2DHookCS.UI
         public NewForm()
         {
             InitializeComponent();
+
             ComboBoxHitscan.SelectedIndex = 0;
 
             Patches.AntiFlash.Set(CheckboxAntiFlash.Checked);
-            Patches.AntiSmoke.Set(CheckboxAntiFlash.Checked);
+            //Patches.AntiSmoke.Set(CheckboxAntiFlash.Checked);
             Patches.AntiTree.Set(CheckboxAntiTree.Checked);
-            Patches.AntiFX.Set(CheckboxAntiFX.Checked);
+            //Patches.AntiFX.Set(CheckboxAntiFX.Checked);
             Patches.Scopex2.Set(Checkboxx2Scope.Checked);
             Patches.SetScopeAlpha(TrackbarScopeAlpha.Value / 100f);
-            Patches.SetMapAlpha(TrackbarMapAlpha.Value / 100f);
-            Patches.SetMapAlpha(TrackbarMapAlpha.Value / 100f);
-            Patches.HideMapBg.Set(CheckboxHideMapBg.Checked);
+            //Patches.SetMapAlpha(TrackbarMapAlpha.Value / 100f);
+            //Patches.HideMapBg.Set(CheckboxHideMapBg.Checked);
             Aimbot.HitscanType = ComboBoxHitscan.SelectedIndex;
             Aimbot.ScanRange = TrackBarHitscanRange.Value;
-            Globals.MapBgColor = Color.Black;
+            //Globals.MapBgColor = Color.Black;
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace CS2DHookCS.UI
         private void TrackbarMapAlpha_Scroll(object sender)
         {
             GroupboxMapAlpha.SubTitle = TrackbarMapAlpha.Value.ToString();
-            Patches.SetMapAlpha((TrackbarMapAlpha.Value / 100f));
+            //Patches.SetMapAlpha((TrackbarMapAlpha.Value / 100f));
         }
 
         private void TrackbarSpeedhack_Scroll(object sender)
@@ -77,17 +77,18 @@ namespace CS2DHookCS.UI
         private void CheckboxAntiFlash_CheckedChanged(object sender)
         {
             Patches.AntiFlash.Set(CheckboxAntiFlash.Checked);
-            Patches.AntiSmoke.Set(CheckboxAntiFlash.Checked);
+            Console.WriteLine(CheckboxAntiFlash.Checked.ToString());
+            //Patches.AntiSmoke.Set(CheckboxAntiFlash.Checked);
         }
 
         private void CheckboxAntiTree_CheckedChanged(object sender)
         {
-            Patches.AntiTree.Set(CheckboxAntiTree.Checked);
+           // Patches.AntiTree.Set(CheckboxAntiTree.Checked);
         }
 
         private void CheckboxAntiFX_CheckedChanged(object sender)
         {
-            Patches.AntiFX.Set(CheckboxAntiFX.Checked);
+            //Patches.AntiFX.Set(CheckboxAntiFX.Checked);
         }
 
         private void Checkboxx2Scope_CheckedChanged(object sender)
@@ -97,12 +98,12 @@ namespace CS2DHookCS.UI
 
         private void CheckboxHideMapBg_CheckedChanged(object sender)
         {
-            Patches.HideMapBg.Set(CheckboxHideMapBg.Checked);
+           // Patches.HideMapBg.Set(CheckboxHideMapBg.Checked);
         }
 
         private void CheckBoxSpinbot_CheckedChanged(object sender)
         {
-            Patches.DontRotate.Set(CheckBoxSpinbot.Checked);
+           // Patches.DontRotate.Set(CheckBoxSpinbot.Checked);
         }
         #endregion Checkboxes
 

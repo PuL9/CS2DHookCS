@@ -8,8 +8,8 @@ namespace CS2DHookCS
 {
     public static class Signatures
     {
-        public static string Gameloop = "55 89 E5 83 EC 0C 53 A1 ? ? ? ? 89 45 F4"; // i dont know but it happens after everything was updated and drawn, somewhere near radar
-        public static string LocalPlayer = "A1 ? ? ? ? 8B 80 ? ? ? ? 89 85 ? ? ? ? DB 85 ? ? ? ? D8 35";
+        public static string Gameloop = "55 89 E5 83 EC 1C 53 56 57 83 3D ? ? ? ? ? 74 31 83 2D ? ? ? ? ? 83 3D ? ? ? ? ? 7F 21 6A 32 6A 1E E8 ? ? ? ?"; // i dont know but it happens after everything was updated and drawn, somewhere near radar
+        public static string LocalPlayer = "A1 ? ? ? ? FF B0 ? ? ? ? A1 ? ? ? ? FF 70 08 E8 ? ? ? ? 83 C4 28 8B 45 08 50 8B 00"; // "A1 ? ? ? ? 8B 80 ? ? ? ? 89 85 ? ? ? ? DB 85 ? ? ? ?"; // + D8 35
 
         // -- Game functions
         public static string Hitscan = "55 89 E5 83 EC 1C 53 56 57 8B 45 08 D9 80 ?? ?? ?? ?? 8B 45 10 89 45 E4 DB 45 E4 DE E9 83 EC 08";
@@ -17,7 +17,7 @@ namespace CS2DHookCS
         public static string ShootRecoil = "55 89 E5 83 EC 68 53 56 57 8B 7D 10";
 
         // -- Removals
-        public static string Antiflash = "D8 05 ? ? ? ? D9 1D ? ? ? ? D9 05 ? ? ? ? D9 E8 D9 C9 DA E9 DF E0 9E 0F 96 C0 0F B6 C0 83 F8 00 75 08 D9 E8 D9 1D ? ? ? ? 6A 01 68";
+        public static string Antiflash = "83 F8 00 0F 84 ? ? ? ? A1 ? ? ? ? D9 80 ? ? ? ? 8B 45 88 D8 60 14 83 EC 08 DD 1C 24 E8 ? ? ? ?";
         public static string AntiSmoke = "E9 ? ? ? ? 6A 03 E8 ? ? ? ? 83 C4 04 68 ? ? ? ? E8";
         public static string AntiTree = "8B 40 18 83 F8 00 74 3B";
         public static string AntiFX = "8B 40 18 83 F8 00 74 20";
@@ -29,6 +29,9 @@ namespace CS2DHookCS
         public static string HideMapBg = "6A 02 E8 ? ? ? ? 83 C4 04 83 3D ? ? ? ? ? 0F 85";
         public static string MapBgColor = "A1 ? ? ? ? 0F B6 40 1A 89 C0 50 A1 ? ? ? ? 0F B6 40 19 89 C0 50 A1 ? ? ? ? 0F B6 40 18 89 C0 50 E8 ? ? ? ? 83 C4 0C E8 ? ? ? ? B8";
 
+        // -- Protection
+        public static string AntiCE = "39 44 9A 18";
+
         // -- BlitzMAX
         public static string Cls = "55 89 E5 A1 ? ? ? ? 50 8B 00 FF 50 64";
         public static string SetColor = "55 89 E5 53 8B 4D 08 8B 55 0C 8B 45 10 8B 1D ? ? ? ? 89 4B 08";
@@ -39,5 +42,6 @@ namespace CS2DHookCS
         public static string DrawString = "55 89 E5 8B 55 08 D9 45 0C D9 45 10 A1";
         public static string DrawStringGame = "55 89 E5 83 EC 18 53 8B 5D 08 D9 45 0C"; // use this
         public static string SetRotation = "55 89 E5 D9 45 08 A1 ? ? ? ? D9 58 28";
+        public static string SetScale = "55 89 E5 D9 45 08 D9 45 0C A1 ? ? ? ? D9 C9 D9 58 2C A1 ? ? ? ? D9 58 30 E8 ? ? ? ? B8 ? ? ? ? EB 00 89 EC 5D C3";
     }
 }

@@ -36,6 +36,8 @@ namespace CS2DHookCS.Engine
             Blitzmax.Init();
             Patches.Init();
 
+            Patches.AntiCE.Enable();
+
             ReadSignatures();
             InitHooks();
         }
@@ -47,27 +49,27 @@ namespace CS2DHookCS.Engine
         {
             ReadPlayers();
 
-            if(Globals.MainForm.CheckBoxNoRecoil.Checked)
-                Globals.LocalPlayer.Recoil = 0;
-
-            DoAimbot();
-            Esp();
-            Speedhack();
-            Visuals();
-            Spinbot();
+            if (Globals.LocalPlayer.IsPlaying)
+            {
+                DoAimbot();
+                Esp();
+                Speedhack();
+                //Visuals();
+                //Spinbot();
+            }
         }
 
         void DoAimbot()
         {
             var player = Aimbot.GetClosestPlayer();
-            if(player != null && player.Distance <= 300 * 3) // TODO: FIX
+            if (player != null && player.Distance <= 300 * 3) // TODO: FIX
             {
                 var relativePoint = Aimbot.RelativePoint(Globals.LocalPlayer, player);
                 var hitscanPos = Aimbot.GetHitscanPoint(player.Hitscan);
                 relativePoint.X -= hitscanPos.X;
                 relativePoint.Y -= hitscanPos.Y;
 
-                if(Globals.MainForm.CheckBoxAutoShoot.Checked || (WinApi.GetAsyncKeyState(System.Windows.Forms.Keys.Space) & 0x8000) != 0)
+                if (Globals.MainForm.CheckBoxAutoShoot.Checked || (WinApi.GetAsyncKeyState(System.Windows.Forms.Keys.Space) & 0x8000) != 0)
                 {
                     var enemyAngle = Aimbot.PointToAngle(relativePoint);
                     GameFuncs.OnRecoilShoot(Globals.LocalPlayer.Base, enemyAngle, 1, 0);
@@ -81,27 +83,27 @@ namespace CS2DHookCS.Engine
             Blitzmax.SetAlpha(1);
             Blitzmax.SetLineWidth(1);
 
-            for(int i = 0; i <= 32; i++)
+            for (int i = 0; i <= 32; i++)
             {
                 Blitzmax.SetColor(255, 255, 255);
                 var player = Globals.Players[i];
 
-                if(player != null && player.Health > 0 && (player.Team != Globals.LocalPlayer.Team || Globals.MainForm.CheckboxEspTeam.Checked))
+                if (player != null && player.Health > 0 && (player.Team != Globals.LocalPlayer.Team || Globals.MainForm.CheckboxEspTeam.Checked))
                 {
                     var relativePoint = Aimbot.RelativePoint(Globals.LocalPlayer, player);
                     var screenPos = Aimbot.ScreenPoint(relativePoint);
 
-                    if(Globals.MainForm.CheckboxEspHealthColor.Checked)
+                    if (Globals.MainForm.CheckboxEspHealthColor.Checked)
                     {
-                        if(player.Health >= 70)
+                        if (player.Health >= 70)
                         {
                             Blitzmax.SetColor(0, 255, 0);
                         }
-                        else if(player.Health >= 50)
+                        else if (player.Health >= 50)
                         {
                             Blitzmax.SetColor(255, 255, 0);
                         }
-                        else if(player.Health >= 20)
+                        else if (player.Health >= 20)
                         {
                             Blitzmax.SetColor(255, 200, 0);
                         }
@@ -111,14 +113,14 @@ namespace CS2DHookCS.Engine
                         }
                     }
 
-                    if(Globals.MainForm.CheckboxEspLines.Checked)
+                    if (Globals.MainForm.CheckboxEspLines.Checked)
                     {
-                        if(player.Hitscan != HitscanResult.None)
+                        if (player.Hitscan != HitscanResult.None)
                             Blitzmax.SetLineWidth(3);
                         Blitzmax.DrawLine(Globals.ScreenWidth / 2, Globals.ScreenHeight / 2, screenPos.X, screenPos.Y, 1);
                         Blitzmax.SetLineWidth(1);
                     }
-                    if(Globals.MainForm.CheckboxEspBoxes.Checked)
+                    if (Globals.MainForm.CheckboxEspBoxes.Checked)
                     {
                         Blitzmax.DrawBorder((int)screenPos.X - 16, (int)screenPos.Y - 16, 32, 32);
                     }
@@ -128,7 +130,7 @@ namespace CS2DHookCS.Engine
 
         void Speedhack()
         {
-            if((WinApi.GetAsyncKeyState(System.Windows.Forms.Keys.LControlKey) & 0x8000) != 0)
+            if ((WinApi.GetAsyncKeyState(System.Windows.Forms.Keys.LControlKey) & 0x8000) != 0)
             {
                 Globals.LocalPlayer.Speed = Globals.Speedhack;
             }
@@ -140,10 +142,10 @@ namespace CS2DHookCS.Engine
 
         void Spinbot()
         {
-            if(Globals.MainForm.CheckBoxSpinbot.Checked)
+            if (Globals.MainForm.CheckBoxSpinbot.Checked)
             {
                 Globals.LocalPlayer.Rotation += (Globals.Spinbot / 100f);
-                if(Globals.LocalPlayer.Rotation > 360)
+                if (Globals.LocalPlayer.Rotation > 360)
                 {
                     Globals.LocalPlayer.Rotation = 0;
                 }
@@ -157,11 +159,11 @@ namespace CS2DHookCS.Engine
         {
             Globals.LocalPlayer = new Player(Memory.ReadPointer(Globals.LocalPlayerPointer));
 
-            for(int i = 0; i <= 32; i++)
+            for (int i = 0; i <= 32; i++)
             {
                 var playerBase = GameFuncs.GetPlayer(i);
 
-                if(playerBase == IntPtr.Zero)
+                if (playerBase == IntPtr.Zero)
                 {
                     Globals.Players[i] = null;
                     continue;
@@ -169,12 +171,12 @@ namespace CS2DHookCS.Engine
 
                 var player = new Player(playerBase);
 
-                if(player.ID != Globals.LocalPlayer.ID && player.Team != Team.S && player.Health > 0)
+                if (player.ID != Globals.LocalPlayer.ID && player.Team != Team.S && player.Health > 0)
                 {
-                    if(player.Team != Globals.LocalPlayer.Team || Globals.MainForm.CheckBoxAimbotTeam.Checked)
+                    if (player.Team != Globals.LocalPlayer.Team || Globals.MainForm.CheckBoxAimbotTeam.Checked)
                     {
                         player.Distance = Helper.CalcRange(Globals.LocalPlayer.PosX, Globals.LocalPlayer.PosY, player.PosX, player.PosY);
-                        if(player.Distance <= 300 * 3) // TODO: READ WEAPON DISTANCE
+                        if (player.Distance <= 300 * 3) // TODO: READ WEAPON DISTANCE
                             player.Hitscan = Aimbot.Hitscan(Globals.LocalPlayer.Base, player.PosX, player.PosY);
                         else
                             player.Hitscan = HitscanResult.None;
@@ -194,7 +196,7 @@ namespace CS2DHookCS.Engine
             Memory.WriteByte(Globals.MapBgColorPointer + 0x19, Globals.MapBgColor.G);
             Memory.WriteByte(Globals.MapBgColorPointer + 0x1A, Globals.MapBgColor.B);
         }
-        
+
         /// <summary>
         /// Read all signatures
         /// </summary>
@@ -224,7 +226,7 @@ namespace CS2DHookCS.Engine
 
             GameLoopHook.UnsetJump();
             GameLoop();
-            GameLoopHook.SetJump();            
+            GameLoopHook.SetJump();
         }
         #endregion
     }

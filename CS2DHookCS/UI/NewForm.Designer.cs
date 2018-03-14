@@ -67,6 +67,8 @@
             this.CheckBoxSpinbot = new NetSeal.NSOnOffBox();
             this.GroupboxSpeedhack = new NetSeal.NSGroupBox();
             this.TrackbarSpeedhack = new NetSeal.NSTrackBar();
+            this.HowToUseTab = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.ButtonExit = new NetSeal.NSControlButton();
             this.nsTheme1.SuspendLayout();
             this.nsTabControl1.SuspendLayout();
@@ -80,6 +82,7 @@
             this.SpeedhackTab.SuspendLayout();
             this.GroupBoxSpinBot.SuspendLayout();
             this.GroupboxSpeedhack.SuspendLayout();
+            this.HowToUseTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // nsTheme1
@@ -94,15 +97,16 @@
             this.nsTheme1.Font = new System.Drawing.Font("Verdana", 8F);
             this.nsTheme1.Image = null;
             this.nsTheme1.Location = new System.Drawing.Point(0, 0);
+            this.nsTheme1.Margin = new System.Windows.Forms.Padding(4);
             this.nsTheme1.Movable = true;
             this.nsTheme1.Name = "nsTheme1";
             this.nsTheme1.NoRounding = false;
             this.nsTheme1.Sizable = false;
-            this.nsTheme1.Size = new System.Drawing.Size(455, 251);
+            this.nsTheme1.Size = new System.Drawing.Size(607, 309);
             this.nsTheme1.SmartBounds = true;
             this.nsTheme1.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.nsTheme1.TabIndex = 0;
-            this.nsTheme1.Text = "CS2D Hack by PuL9 [1.0]";
+            this.nsTheme1.Text = "CS2D Hack by PuL9 [1.0.0.6] v1 [pub]";
             this.nsTheme1.TransparencyKey = System.Drawing.Color.Empty;
             this.nsTheme1.Transparent = false;
             // 
@@ -114,13 +118,15 @@
             this.nsTabControl1.Controls.Add(this.RemovalsTab);
             this.nsTabControl1.Controls.Add(this.VisualsTab);
             this.nsTabControl1.Controls.Add(this.SpeedhackTab);
+            this.nsTabControl1.Controls.Add(this.HowToUseTab);
             this.nsTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.nsTabControl1.ItemSize = new System.Drawing.Size(28, 115);
-            this.nsTabControl1.Location = new System.Drawing.Point(12, 39);
+            this.nsTabControl1.Location = new System.Drawing.Point(16, 48);
+            this.nsTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.nsTabControl1.Multiline = true;
             this.nsTabControl1.Name = "nsTabControl1";
             this.nsTabControl1.SelectedIndex = 0;
-            this.nsTabControl1.Size = new System.Drawing.Size(431, 203);
+            this.nsTabControl1.Size = new System.Drawing.Size(575, 250);
             this.nsTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.nsTabControl1.TabIndex = 1;
             // 
@@ -138,9 +144,10 @@
             this.AimbotTab.Controls.Add(this.label1);
             this.AimbotTab.Controls.Add(this.CheckBoxSilentAim);
             this.AimbotTab.Location = new System.Drawing.Point(119, 4);
+            this.AimbotTab.Margin = new System.Windows.Forms.Padding(4);
             this.AimbotTab.Name = "AimbotTab";
-            this.AimbotTab.Padding = new System.Windows.Forms.Padding(3);
-            this.AimbotTab.Size = new System.Drawing.Size(308, 195);
+            this.AimbotTab.Padding = new System.Windows.Forms.Padding(4);
+            this.AimbotTab.Size = new System.Drawing.Size(452, 242);
             this.AimbotTab.TabIndex = 0;
             this.AimbotTab.Text = "Aimbot";
             // 
@@ -148,9 +155,10 @@
             // 
             this.GroupboxHitscan.Controls.Add(this.TrackBarHitscanRange);
             this.GroupboxHitscan.DrawSeperator = false;
-            this.GroupboxHitscan.Location = new System.Drawing.Point(9, 130);
+            this.GroupboxHitscan.Location = new System.Drawing.Point(12, 160);
+            this.GroupboxHitscan.Margin = new System.Windows.Forms.Padding(4);
             this.GroupboxHitscan.Name = "GroupboxHitscan";
-            this.GroupboxHitscan.Size = new System.Drawing.Size(293, 59);
+            this.GroupboxHitscan.Size = new System.Drawing.Size(391, 73);
             this.GroupboxHitscan.SubTitle = "10";
             this.GroupboxHitscan.TabIndex = 9;
             this.GroupboxHitscan.Text = "nsGroupBox1";
@@ -158,11 +166,12 @@
             // 
             // TrackBarHitscanRange
             // 
-            this.TrackBarHitscanRange.Location = new System.Drawing.Point(3, 35);
+            this.TrackBarHitscanRange.Location = new System.Drawing.Point(4, 43);
+            this.TrackBarHitscanRange.Margin = new System.Windows.Forms.Padding(4);
             this.TrackBarHitscanRange.Maximum = 16;
             this.TrackBarHitscanRange.Minimum = 1;
             this.TrackBarHitscanRange.Name = "TrackBarHitscanRange";
-            this.TrackBarHitscanRange.Size = new System.Drawing.Size(287, 23);
+            this.TrackBarHitscanRange.Size = new System.Drawing.Size(383, 28);
             this.TrackBarHitscanRange.TabIndex = 0;
             this.TrackBarHitscanRange.Value = 10;
             this.TrackBarHitscanRange.Scroll += new NetSeal.NSTrackBar.ScrollEventHandler(this.TrackBarHitscanRange_Scroll);
@@ -171,9 +180,10 @@
             // 
             this.CheckBoxAutoShoot.Checked = true;
             this.CheckBoxAutoShoot.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxAutoShoot.Location = new System.Drawing.Point(95, 101);
+            this.CheckBoxAutoShoot.Location = new System.Drawing.Point(127, 124);
+            this.CheckBoxAutoShoot.Margin = new System.Windows.Forms.Padding(4);
             this.CheckBoxAutoShoot.Name = "CheckBoxAutoShoot";
-            this.CheckBoxAutoShoot.Size = new System.Drawing.Size(110, 23);
+            this.CheckBoxAutoShoot.Size = new System.Drawing.Size(147, 28);
             this.CheckBoxAutoShoot.TabIndex = 8;
             this.CheckBoxAutoShoot.Text = "Auto shoot";
             // 
@@ -181,9 +191,10 @@
             // 
             this.CheckBoxAimbotTeam.Checked = false;
             this.CheckBoxAimbotTeam.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxAimbotTeam.Location = new System.Drawing.Point(9, 101);
+            this.CheckBoxAimbotTeam.Location = new System.Drawing.Point(12, 124);
+            this.CheckBoxAimbotTeam.Margin = new System.Windows.Forms.Padding(4);
             this.CheckBoxAimbotTeam.Name = "CheckBoxAimbotTeam";
-            this.CheckBoxAimbotTeam.Size = new System.Drawing.Size(110, 23);
+            this.CheckBoxAimbotTeam.Size = new System.Drawing.Size(147, 28);
             this.CheckBoxAimbotTeam.TabIndex = 7;
             this.CheckBoxAimbotTeam.Text = "Team";
             // 
@@ -197,18 +208,20 @@
             this.ComboBoxHitscan.Items.AddRange(new object[] {
             "Pole",
             "Box"});
-            this.ComboBoxHitscan.Location = new System.Drawing.Point(211, 72);
+            this.ComboBoxHitscan.Location = new System.Drawing.Point(281, 89);
+            this.ComboBoxHitscan.Margin = new System.Windows.Forms.Padding(4);
             this.ComboBoxHitscan.Name = "ComboBoxHitscan";
-            this.ComboBoxHitscan.Size = new System.Drawing.Size(91, 21);
+            this.ComboBoxHitscan.Size = new System.Drawing.Size(120, 25);
             this.ComboBoxHitscan.TabIndex = 6;
             // 
             // CheckBoxMultiHitscan
             // 
             this.CheckBoxMultiHitscan.Checked = true;
             this.CheckBoxMultiHitscan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxMultiHitscan.Location = new System.Drawing.Point(95, 72);
+            this.CheckBoxMultiHitscan.Location = new System.Drawing.Point(127, 89);
+            this.CheckBoxMultiHitscan.Margin = new System.Windows.Forms.Padding(4);
             this.CheckBoxMultiHitscan.Name = "CheckBoxMultiHitscan";
-            this.CheckBoxMultiHitscan.Size = new System.Drawing.Size(110, 23);
+            this.CheckBoxMultiHitscan.Size = new System.Drawing.Size(147, 28);
             this.CheckBoxMultiHitscan.TabIndex = 5;
             this.CheckBoxMultiHitscan.Text = "Multi hitscan";
             // 
@@ -216,9 +229,10 @@
             // 
             this.CheckBoxNoRecoil.Checked = true;
             this.CheckBoxNoRecoil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxNoRecoil.Location = new System.Drawing.Point(9, 72);
+            this.CheckBoxNoRecoil.Location = new System.Drawing.Point(12, 89);
+            this.CheckBoxNoRecoil.Margin = new System.Windows.Forms.Padding(4);
             this.CheckBoxNoRecoil.Name = "CheckBoxNoRecoil";
-            this.CheckBoxNoRecoil.Size = new System.Drawing.Size(110, 23);
+            this.CheckBoxNoRecoil.Size = new System.Drawing.Size(147, 28);
             this.CheckBoxNoRecoil.TabIndex = 4;
             this.CheckBoxNoRecoil.Text = "No recoil";
             // 
@@ -226,21 +240,23 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 38);
+            this.label2.Location = new System.Drawing.Point(12, 47);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.Size = new System.Drawing.Size(110, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Trigger aimbot";
             // 
             // nsOnOffBox2
             // 
-            this.nsOnOffBox2.Checked = false;
+            this.nsOnOffBox2.Checked = true;
             this.nsOnOffBox2.Enabled = false;
-            this.nsOnOffBox2.Location = new System.Drawing.Point(249, 33);
-            this.nsOnOffBox2.MaximumSize = new System.Drawing.Size(56, 24);
-            this.nsOnOffBox2.MinimumSize = new System.Drawing.Size(56, 24);
+            this.nsOnOffBox2.Location = new System.Drawing.Point(332, 41);
+            this.nsOnOffBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.nsOnOffBox2.MaximumSize = new System.Drawing.Size(75, 30);
+            this.nsOnOffBox2.MinimumSize = new System.Drawing.Size(75, 30);
             this.nsOnOffBox2.Name = "nsOnOffBox2";
-            this.nsOnOffBox2.Size = new System.Drawing.Size(56, 24);
+            this.nsOnOffBox2.Size = new System.Drawing.Size(75, 30);
             this.nsOnOffBox2.TabIndex = 2;
             this.nsOnOffBox2.Text = "nsOnOffBox2";
             // 
@@ -248,9 +264,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 8);
+            this.label1.Location = new System.Drawing.Point(12, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.Size = new System.Drawing.Size(100, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Silent aimbot";
             // 
@@ -258,11 +275,13 @@
             // 
             this.CheckBoxSilentAim.Checked = true;
             this.CheckBoxSilentAim.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxSilentAim.Location = new System.Drawing.Point(249, 3);
-            this.CheckBoxSilentAim.MaximumSize = new System.Drawing.Size(56, 24);
-            this.CheckBoxSilentAim.MinimumSize = new System.Drawing.Size(56, 24);
+            this.CheckBoxSilentAim.Enabled = false;
+            this.CheckBoxSilentAim.Location = new System.Drawing.Point(332, 4);
+            this.CheckBoxSilentAim.Margin = new System.Windows.Forms.Padding(4);
+            this.CheckBoxSilentAim.MaximumSize = new System.Drawing.Size(75, 30);
+            this.CheckBoxSilentAim.MinimumSize = new System.Drawing.Size(75, 30);
             this.CheckBoxSilentAim.Name = "CheckBoxSilentAim";
-            this.CheckBoxSilentAim.Size = new System.Drawing.Size(56, 24);
+            this.CheckBoxSilentAim.Size = new System.Drawing.Size(75, 30);
             this.CheckBoxSilentAim.TabIndex = 0;
             this.CheckBoxSilentAim.Text = "nsOnOffBox1";
             // 
@@ -276,8 +295,9 @@
             this.EspTab.Controls.Add(this.label3);
             this.EspTab.Controls.Add(this.CheckboxEspLines);
             this.EspTab.Location = new System.Drawing.Point(119, 4);
+            this.EspTab.Margin = new System.Windows.Forms.Padding(4);
             this.EspTab.Name = "EspTab";
-            this.EspTab.Size = new System.Drawing.Size(308, 195);
+            this.EspTab.Size = new System.Drawing.Size(452, 242);
             this.EspTab.TabIndex = 1;
             this.EspTab.Text = "ESP";
             // 
@@ -285,9 +305,10 @@
             // 
             this.CheckboxEspHealthColor.Checked = true;
             this.CheckboxEspHealthColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckboxEspHealthColor.Location = new System.Drawing.Point(98, 64);
+            this.CheckboxEspHealthColor.Location = new System.Drawing.Point(131, 79);
+            this.CheckboxEspHealthColor.Margin = new System.Windows.Forms.Padding(4);
             this.CheckboxEspHealthColor.Name = "CheckboxEspHealthColor";
-            this.CheckboxEspHealthColor.Size = new System.Drawing.Size(110, 23);
+            this.CheckboxEspHealthColor.Size = new System.Drawing.Size(147, 28);
             this.CheckboxEspHealthColor.TabIndex = 7;
             this.CheckboxEspHealthColor.Text = "Health color";
             // 
@@ -295,9 +316,10 @@
             // 
             this.CheckboxEspTeam.Checked = false;
             this.CheckboxEspTeam.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckboxEspTeam.Location = new System.Drawing.Point(12, 64);
+            this.CheckboxEspTeam.Location = new System.Drawing.Point(16, 79);
+            this.CheckboxEspTeam.Margin = new System.Windows.Forms.Padding(4);
             this.CheckboxEspTeam.Name = "CheckboxEspTeam";
-            this.CheckboxEspTeam.Size = new System.Drawing.Size(110, 23);
+            this.CheckboxEspTeam.Size = new System.Drawing.Size(147, 28);
             this.CheckboxEspTeam.TabIndex = 6;
             this.CheckboxEspTeam.Text = "Team";
             // 
@@ -305,9 +327,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(9, 38);
+            this.label4.Location = new System.Drawing.Point(12, 47);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "Boxes";
             // 
@@ -315,11 +338,12 @@
             // 
             this.CheckboxEspBoxes.Checked = true;
             this.CheckboxEspBoxes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckboxEspBoxes.Location = new System.Drawing.Point(249, 33);
-            this.CheckboxEspBoxes.MaximumSize = new System.Drawing.Size(56, 24);
-            this.CheckboxEspBoxes.MinimumSize = new System.Drawing.Size(56, 24);
+            this.CheckboxEspBoxes.Location = new System.Drawing.Point(332, 41);
+            this.CheckboxEspBoxes.Margin = new System.Windows.Forms.Padding(4);
+            this.CheckboxEspBoxes.MaximumSize = new System.Drawing.Size(75, 30);
+            this.CheckboxEspBoxes.MinimumSize = new System.Drawing.Size(75, 30);
             this.CheckboxEspBoxes.Name = "CheckboxEspBoxes";
-            this.CheckboxEspBoxes.Size = new System.Drawing.Size(56, 24);
+            this.CheckboxEspBoxes.Size = new System.Drawing.Size(75, 30);
             this.CheckboxEspBoxes.TabIndex = 4;
             this.CheckboxEspBoxes.Text = "nsOnOffBox3";
             // 
@@ -327,9 +351,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 8);
+            this.label3.Location = new System.Drawing.Point(12, 10);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.Size = new System.Drawing.Size(44, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Lines";
             // 
@@ -337,11 +362,12 @@
             // 
             this.CheckboxEspLines.Checked = true;
             this.CheckboxEspLines.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckboxEspLines.Location = new System.Drawing.Point(249, 3);
-            this.CheckboxEspLines.MaximumSize = new System.Drawing.Size(56, 24);
-            this.CheckboxEspLines.MinimumSize = new System.Drawing.Size(56, 24);
+            this.CheckboxEspLines.Location = new System.Drawing.Point(332, 4);
+            this.CheckboxEspLines.Margin = new System.Windows.Forms.Padding(4);
+            this.CheckboxEspLines.MaximumSize = new System.Drawing.Size(75, 30);
+            this.CheckboxEspLines.MinimumSize = new System.Drawing.Size(75, 30);
             this.CheckboxEspLines.Name = "CheckboxEspLines";
-            this.CheckboxEspLines.Size = new System.Drawing.Size(56, 24);
+            this.CheckboxEspLines.Size = new System.Drawing.Size(75, 30);
             this.CheckboxEspLines.TabIndex = 2;
             this.CheckboxEspLines.Text = "nsOnOffBox1";
             // 
@@ -354,8 +380,9 @@
             this.RemovalsTab.Controls.Add(this.CheckboxAntiTree);
             this.RemovalsTab.Controls.Add(this.CheckboxAntiFlash);
             this.RemovalsTab.Location = new System.Drawing.Point(119, 4);
+            this.RemovalsTab.Margin = new System.Windows.Forms.Padding(4);
             this.RemovalsTab.Name = "RemovalsTab";
-            this.RemovalsTab.Size = new System.Drawing.Size(308, 195);
+            this.RemovalsTab.Size = new System.Drawing.Size(452, 242);
             this.RemovalsTab.TabIndex = 2;
             this.RemovalsTab.Text = "Removals";
             // 
@@ -363,9 +390,10 @@
             // 
             this.GroupboxScopeAlpha.Controls.Add(this.TrackbarScopeAlpha);
             this.GroupboxScopeAlpha.DrawSeperator = false;
-            this.GroupboxScopeAlpha.Location = new System.Drawing.Point(9, 66);
+            this.GroupboxScopeAlpha.Location = new System.Drawing.Point(12, 81);
+            this.GroupboxScopeAlpha.Margin = new System.Windows.Forms.Padding(4);
             this.GroupboxScopeAlpha.Name = "GroupboxScopeAlpha";
-            this.GroupboxScopeAlpha.Size = new System.Drawing.Size(293, 59);
+            this.GroupboxScopeAlpha.Size = new System.Drawing.Size(391, 73);
             this.GroupboxScopeAlpha.SubTitle = "100";
             this.GroupboxScopeAlpha.TabIndex = 12;
             this.GroupboxScopeAlpha.Text = "nsGroupBox1";
@@ -373,33 +401,37 @@
             // 
             // TrackbarScopeAlpha
             // 
-            this.TrackbarScopeAlpha.Location = new System.Drawing.Point(3, 35);
+            this.TrackbarScopeAlpha.Location = new System.Drawing.Point(4, 43);
+            this.TrackbarScopeAlpha.Margin = new System.Windows.Forms.Padding(4);
             this.TrackbarScopeAlpha.Maximum = 100;
             this.TrackbarScopeAlpha.Minimum = 0;
             this.TrackbarScopeAlpha.Name = "TrackbarScopeAlpha";
-            this.TrackbarScopeAlpha.Size = new System.Drawing.Size(287, 23);
+            this.TrackbarScopeAlpha.Size = new System.Drawing.Size(383, 28);
             this.TrackbarScopeAlpha.TabIndex = 0;
-            this.TrackbarScopeAlpha.Value = 100;
+            this.TrackbarScopeAlpha.Value = 30;
             this.TrackbarScopeAlpha.Scroll += new NetSeal.NSTrackBar.ScrollEventHandler(this.TrackbarScopeAlpha_Scroll);
             // 
             // Checkboxx2Scope
             // 
             this.Checkboxx2Scope.Checked = true;
             this.Checkboxx2Scope.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Checkboxx2Scope.Location = new System.Drawing.Point(151, 37);
+            this.Checkboxx2Scope.Location = new System.Drawing.Point(201, 46);
+            this.Checkboxx2Scope.Margin = new System.Windows.Forms.Padding(4);
             this.Checkboxx2Scope.Name = "Checkboxx2Scope";
-            this.Checkboxx2Scope.Size = new System.Drawing.Size(136, 23);
+            this.Checkboxx2Scope.Size = new System.Drawing.Size(181, 28);
             this.Checkboxx2Scope.TabIndex = 11;
             this.Checkboxx2Scope.Text = "x2 Scope";
             this.Checkboxx2Scope.CheckedChanged += new NetSeal.NSCheckBox.CheckedChangedEventHandler(this.Checkboxx2Scope_CheckedChanged);
             // 
             // CheckboxAntiFX
             // 
-            this.CheckboxAntiFX.Checked = true;
+            this.CheckboxAntiFX.Checked = false;
             this.CheckboxAntiFX.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckboxAntiFX.Location = new System.Drawing.Point(9, 37);
+            this.CheckboxAntiFX.Enabled = false;
+            this.CheckboxAntiFX.Location = new System.Drawing.Point(12, 46);
+            this.CheckboxAntiFX.Margin = new System.Windows.Forms.Padding(4);
             this.CheckboxAntiFX.Name = "CheckboxAntiFX";
-            this.CheckboxAntiFX.Size = new System.Drawing.Size(136, 23);
+            this.CheckboxAntiFX.Size = new System.Drawing.Size(181, 28);
             this.CheckboxAntiFX.TabIndex = 10;
             this.CheckboxAntiFX.Text = "Anti FX";
             this.CheckboxAntiFX.CheckedChanged += new NetSeal.NSCheckBox.CheckedChangedEventHandler(this.CheckboxAntiFX_CheckedChanged);
@@ -408,9 +440,10 @@
             // 
             this.CheckboxAntiTree.Checked = true;
             this.CheckboxAntiTree.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckboxAntiTree.Location = new System.Drawing.Point(151, 8);
+            this.CheckboxAntiTree.Location = new System.Drawing.Point(201, 10);
+            this.CheckboxAntiTree.Margin = new System.Windows.Forms.Padding(4);
             this.CheckboxAntiTree.Name = "CheckboxAntiTree";
-            this.CheckboxAntiTree.Size = new System.Drawing.Size(136, 23);
+            this.CheckboxAntiTree.Size = new System.Drawing.Size(181, 28);
             this.CheckboxAntiTree.TabIndex = 9;
             this.CheckboxAntiTree.Text = "Anti tree";
             this.CheckboxAntiTree.CheckedChanged += new NetSeal.NSCheckBox.CheckedChangedEventHandler(this.CheckboxAntiTree_CheckedChanged);
@@ -419,9 +452,10 @@
             // 
             this.CheckboxAntiFlash.Checked = true;
             this.CheckboxAntiFlash.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckboxAntiFlash.Location = new System.Drawing.Point(9, 8);
+            this.CheckboxAntiFlash.Location = new System.Drawing.Point(12, 10);
+            this.CheckboxAntiFlash.Margin = new System.Windows.Forms.Padding(4);
             this.CheckboxAntiFlash.Name = "CheckboxAntiFlash";
-            this.CheckboxAntiFlash.Size = new System.Drawing.Size(136, 23);
+            this.CheckboxAntiFlash.Size = new System.Drawing.Size(181, 28);
             this.CheckboxAntiFlash.TabIndex = 8;
             this.CheckboxAntiFlash.Text = "Anti flash & smoke";
             this.CheckboxAntiFlash.CheckedChanged += new NetSeal.NSCheckBox.CheckedChangedEventHandler(this.CheckboxAntiFlash_CheckedChanged);
@@ -431,8 +465,9 @@
             this.VisualsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.VisualsTab.Controls.Add(this.GroupboxMapAlpha);
             this.VisualsTab.Location = new System.Drawing.Point(119, 4);
+            this.VisualsTab.Margin = new System.Windows.Forms.Padding(4);
             this.VisualsTab.Name = "VisualsTab";
-            this.VisualsTab.Size = new System.Drawing.Size(308, 195);
+            this.VisualsTab.Size = new System.Drawing.Size(452, 242);
             this.VisualsTab.TabIndex = 3;
             this.VisualsTab.Text = "Visuals";
             // 
@@ -442,9 +477,10 @@
             this.GroupboxMapAlpha.Controls.Add(this.CheckboxHideMapBg);
             this.GroupboxMapAlpha.Controls.Add(this.TrackbarMapAlpha);
             this.GroupboxMapAlpha.DrawSeperator = false;
-            this.GroupboxMapAlpha.Location = new System.Drawing.Point(7, 6);
+            this.GroupboxMapAlpha.Location = new System.Drawing.Point(9, 7);
+            this.GroupboxMapAlpha.Margin = new System.Windows.Forms.Padding(4);
             this.GroupboxMapAlpha.Name = "GroupboxMapAlpha";
-            this.GroupboxMapAlpha.Size = new System.Drawing.Size(293, 81);
+            this.GroupboxMapAlpha.Size = new System.Drawing.Size(391, 100);
             this.GroupboxMapAlpha.SubTitle = "100";
             this.GroupboxMapAlpha.TabIndex = 14;
             this.GroupboxMapAlpha.Text = "Map alpha";
@@ -454,9 +490,11 @@
             // 
             this.ButtonMapBgColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ButtonMapBgColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonMapBgColor.Location = new System.Drawing.Point(189, 58);
+            this.ButtonMapBgColor.Enabled = false;
+            this.ButtonMapBgColor.Location = new System.Drawing.Point(252, 71);
+            this.ButtonMapBgColor.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonMapBgColor.Name = "ButtonMapBgColor";
-            this.ButtonMapBgColor.Size = new System.Drawing.Size(101, 20);
+            this.ButtonMapBgColor.Size = new System.Drawing.Size(135, 25);
             this.ButtonMapBgColor.TabIndex = 15;
             this.ButtonMapBgColor.Text = "BG Color";
             this.ButtonMapBgColor.Click += new System.EventHandler(this.ButtonMapBgColor_Click);
@@ -465,20 +503,23 @@
             // 
             this.CheckboxHideMapBg.Checked = false;
             this.CheckboxHideMapBg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckboxHideMapBg.Location = new System.Drawing.Point(3, 59);
+            this.CheckboxHideMapBg.Enabled = false;
+            this.CheckboxHideMapBg.Location = new System.Drawing.Point(4, 73);
+            this.CheckboxHideMapBg.Margin = new System.Windows.Forms.Padding(4);
             this.CheckboxHideMapBg.Name = "CheckboxHideMapBg";
-            this.CheckboxHideMapBg.Size = new System.Drawing.Size(161, 21);
+            this.CheckboxHideMapBg.Size = new System.Drawing.Size(215, 26);
             this.CheckboxHideMapBg.TabIndex = 1;
             this.CheckboxHideMapBg.Text = "Hide background image";
             this.CheckboxHideMapBg.CheckedChanged += new NetSeal.NSCheckBox.CheckedChangedEventHandler(this.CheckboxHideMapBg_CheckedChanged);
             // 
             // TrackbarMapAlpha
             // 
-            this.TrackbarMapAlpha.Location = new System.Drawing.Point(3, 35);
+            this.TrackbarMapAlpha.Location = new System.Drawing.Point(4, 43);
+            this.TrackbarMapAlpha.Margin = new System.Windows.Forms.Padding(4);
             this.TrackbarMapAlpha.Maximum = 100;
             this.TrackbarMapAlpha.Minimum = 0;
             this.TrackbarMapAlpha.Name = "TrackbarMapAlpha";
-            this.TrackbarMapAlpha.Size = new System.Drawing.Size(287, 23);
+            this.TrackbarMapAlpha.Size = new System.Drawing.Size(383, 28);
             this.TrackbarMapAlpha.TabIndex = 0;
             this.TrackbarMapAlpha.Value = 100;
             this.TrackbarMapAlpha.Scroll += new NetSeal.NSTrackBar.ScrollEventHandler(this.TrackbarMapAlpha_Scroll);
@@ -489,9 +530,10 @@
             this.SpeedhackTab.Controls.Add(this.GroupBoxSpinBot);
             this.SpeedhackTab.Controls.Add(this.GroupboxSpeedhack);
             this.SpeedhackTab.Location = new System.Drawing.Point(119, 4);
+            this.SpeedhackTab.Margin = new System.Windows.Forms.Padding(4);
             this.SpeedhackTab.Name = "SpeedhackTab";
-            this.SpeedhackTab.Padding = new System.Windows.Forms.Padding(3);
-            this.SpeedhackTab.Size = new System.Drawing.Size(308, 195);
+            this.SpeedhackTab.Padding = new System.Windows.Forms.Padding(4);
+            this.SpeedhackTab.Size = new System.Drawing.Size(452, 242);
             this.SpeedhackTab.TabIndex = 4;
             this.SpeedhackTab.Text = "Speedhack";
             // 
@@ -500,20 +542,22 @@
             this.GroupBoxSpinBot.Controls.Add(this.TrackbarSpinbot);
             this.GroupBoxSpinBot.Controls.Add(this.CheckBoxSpinbot);
             this.GroupBoxSpinBot.DrawSeperator = false;
-            this.GroupBoxSpinBot.Location = new System.Drawing.Point(7, 71);
+            this.GroupBoxSpinBot.Location = new System.Drawing.Point(9, 87);
+            this.GroupBoxSpinBot.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBoxSpinBot.Name = "GroupBoxSpinBot";
-            this.GroupBoxSpinBot.Size = new System.Drawing.Size(293, 59);
+            this.GroupBoxSpinBot.Size = new System.Drawing.Size(391, 73);
             this.GroupBoxSpinBot.SubTitle = "0";
             this.GroupBoxSpinBot.TabIndex = 14;
             this.GroupBoxSpinBot.Title = "Spinbot";
             // 
             // TrackbarSpinbot
             // 
-            this.TrackbarSpinbot.Location = new System.Drawing.Point(3, 35);
+            this.TrackbarSpinbot.Location = new System.Drawing.Point(4, 43);
+            this.TrackbarSpinbot.Margin = new System.Windows.Forms.Padding(4);
             this.TrackbarSpinbot.Maximum = 5000;
             this.TrackbarSpinbot.Minimum = 0;
             this.TrackbarSpinbot.Name = "TrackbarSpinbot";
-            this.TrackbarSpinbot.Size = new System.Drawing.Size(287, 23);
+            this.TrackbarSpinbot.Size = new System.Drawing.Size(383, 28);
             this.TrackbarSpinbot.TabIndex = 0;
             this.TrackbarSpinbot.Value = 0;
             this.TrackbarSpinbot.Scroll += new NetSeal.NSTrackBar.ScrollEventHandler(this.TrackbarSpinbot_Scroll);
@@ -521,11 +565,12 @@
             // CheckBoxSpinbot
             // 
             this.CheckBoxSpinbot.Checked = false;
-            this.CheckBoxSpinbot.Location = new System.Drawing.Point(234, 3);
-            this.CheckBoxSpinbot.MaximumSize = new System.Drawing.Size(56, 24);
-            this.CheckBoxSpinbot.MinimumSize = new System.Drawing.Size(56, 24);
+            this.CheckBoxSpinbot.Location = new System.Drawing.Point(312, 4);
+            this.CheckBoxSpinbot.Margin = new System.Windows.Forms.Padding(4);
+            this.CheckBoxSpinbot.MaximumSize = new System.Drawing.Size(75, 30);
+            this.CheckBoxSpinbot.MinimumSize = new System.Drawing.Size(75, 30);
             this.CheckBoxSpinbot.Name = "CheckBoxSpinbot";
-            this.CheckBoxSpinbot.Size = new System.Drawing.Size(56, 24);
+            this.CheckBoxSpinbot.Size = new System.Drawing.Size(75, 30);
             this.CheckBoxSpinbot.TabIndex = 1;
             this.CheckBoxSpinbot.CheckedChanged += new NetSeal.NSOnOffBox.CheckedChangedEventHandler(this.CheckBoxSpinbot_CheckedChanged);
             // 
@@ -533,44 +578,69 @@
             // 
             this.GroupboxSpeedhack.Controls.Add(this.TrackbarSpeedhack);
             this.GroupboxSpeedhack.DrawSeperator = false;
-            this.GroupboxSpeedhack.Location = new System.Drawing.Point(9, 6);
+            this.GroupboxSpeedhack.Location = new System.Drawing.Point(12, 7);
+            this.GroupboxSpeedhack.Margin = new System.Windows.Forms.Padding(4);
             this.GroupboxSpeedhack.Name = "GroupboxSpeedhack";
-            this.GroupboxSpeedhack.Size = new System.Drawing.Size(293, 59);
+            this.GroupboxSpeedhack.Size = new System.Drawing.Size(391, 73);
             this.GroupboxSpeedhack.SubTitle = "100";
             this.GroupboxSpeedhack.TabIndex = 13;
             this.GroupboxSpeedhack.Title = "Speedhack";
             // 
             // TrackbarSpeedhack
             // 
-            this.TrackbarSpeedhack.Location = new System.Drawing.Point(3, 35);
+            this.TrackbarSpeedhack.Location = new System.Drawing.Point(4, 43);
+            this.TrackbarSpeedhack.Margin = new System.Windows.Forms.Padding(4);
             this.TrackbarSpeedhack.Maximum = 200;
             this.TrackbarSpeedhack.Minimum = 0;
             this.TrackbarSpeedhack.Name = "TrackbarSpeedhack";
-            this.TrackbarSpeedhack.Size = new System.Drawing.Size(287, 23);
+            this.TrackbarSpeedhack.Size = new System.Drawing.Size(383, 28);
             this.TrackbarSpeedhack.TabIndex = 14;
             this.TrackbarSpeedhack.Value = 100;
             this.TrackbarSpeedhack.Scroll += new NetSeal.NSTrackBar.ScrollEventHandler(this.TrackbarSpeedhack_Scroll);
+            // 
+            // HowToUseTab
+            // 
+            this.HowToUseTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.HowToUseTab.Controls.Add(this.label5);
+            this.HowToUseTab.Location = new System.Drawing.Point(119, 4);
+            this.HowToUseTab.Name = "HowToUseTab";
+            this.HowToUseTab.Size = new System.Drawing.Size(452, 242);
+            this.HowToUseTab.TabIndex = 5;
+            this.HowToUseTab.Text = "How to use";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(25, 53);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(244, 85);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "CTRL for speedhack\r\nSpace for aimbot\r\nNot all functions are working\r\n\r\n-- Do not " +
+    "cheat on public servers";
             // 
             // ButtonExit
             // 
             this.ButtonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonExit.ControlButton = NetSeal.NSControlButton.Button.Close;
-            this.ButtonExit.Location = new System.Drawing.Point(430, 4);
+            this.ButtonExit.Location = new System.Drawing.Point(573, 5);
             this.ButtonExit.Margin = new System.Windows.Forms.Padding(0);
-            this.ButtonExit.MaximumSize = new System.Drawing.Size(18, 20);
-            this.ButtonExit.MinimumSize = new System.Drawing.Size(18, 20);
+            this.ButtonExit.MaximumSize = new System.Drawing.Size(24, 25);
+            this.ButtonExit.MinimumSize = new System.Drawing.Size(24, 25);
             this.ButtonExit.Name = "ButtonExit";
-            this.ButtonExit.Size = new System.Drawing.Size(18, 20);
+            this.ButtonExit.Size = new System.Drawing.Size(24, 25);
             this.ButtonExit.TabIndex = 0;
             this.ButtonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // NewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 251);
+            this.ClientSize = new System.Drawing.Size(607, 309);
             this.Controls.Add(this.nsTheme1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NewForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewForm";
@@ -588,6 +658,8 @@
             this.SpeedhackTab.ResumeLayout(false);
             this.GroupBoxSpinBot.ResumeLayout(false);
             this.GroupboxSpeedhack.ResumeLayout(false);
+            this.HowToUseTab.ResumeLayout(false);
+            this.HowToUseTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -634,5 +706,7 @@
         private NetSeal.NSTrackBar TrackbarSpeedhack;
         public NetSeal.NSTrackBar TrackbarSpinbot;
         public NetSeal.NSOnOffBox CheckBoxSpinbot;
+        private System.Windows.Forms.TabPage HowToUseTab;
+        private System.Windows.Forms.Label label5;
     }
 }
